@@ -188,12 +188,13 @@
             <div class="col m7">
               <div class="details">
                 <div class="title">JOY OF DISCOVERING</div>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
-                  irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+                  aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
               </div>
-              <div class="image">
-                <img src="http://c93fea60bb98e121740fc38ff31162a8.s3.amazonaws.com/wp-content/uploads/2017/06/travel_website_online.jpg" alt="">
+              <div class="parallax-container">
+                <div class="parallax"><img src="http://c93fea60bb98e121740fc38ff31162a8.s3.amazonaws.com/wp-content/uploads/2017/06/travel_website_online.jpg"></div>
               </div>
+
             </div>
           </div>
 
@@ -219,6 +220,11 @@
   <script charset="utf-8" src="dist/js/materialize.min.js"></script>
   <script charset="utf-8" src="dist/js/swiper.min.js"></script>
   <script charset="utf-8" src="js/script.js"></script>
+  <script charset="utf-8">
+    $(document).ready(function() {
+      $('.parallax').parallax();
+    });
+  </script>
 </body>
 
 </html>
