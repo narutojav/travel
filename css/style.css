@@ -229,3 +229,19 @@ li:hover .under_line {
   width: 100%;
 
 }
+#vidoe .swiper-wrapper{
+  height: auto;
+}
+#video .image{
+  height: 600px;
+  width: 600px;
+}
+#video .swiper-slide  img{
+  position: absolute;
+  width: 100%;
+}
+#video .details{
+  width: 400px;
+  height: 400px;
+  background-image: url(http://www.petercollingridge.co.uk/sites/files/peter/Blank%20map%20display%20names.svg);
+}

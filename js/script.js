@@ -24,3 +24,17 @@ var topswiper = new Swiper('#top .swiper-container', {
     prevEl: '#top .s-left',
   },
 });
+
+var videoswiper = new Swiper('#video .swiper-container', {
+  slidesPerView: 1,
+  spaceBetween: 30,
+  loop: true,
+  pagination: {
+    el: '#top .swiper-pagination',
+    clickable: true,
+  },
+  navigation: {
+    nextEl: '#top .s-right',
+    prevEl: '#top .s-left',
+  },
+});
