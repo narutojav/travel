@@ -1,6 +1,7 @@
 <html>
 
 <head>
+  <meta charset="UTF-8">
   <title>Woobox Promotions Manager</title>
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -70,7 +71,30 @@
           <div class="pull-right">
             <div class="btn-group">
               <a href="/manage/posts/refreshposts" class="btn btn-large btn-primary"><i class="fa fa-refresh"></i> Refresh Posts</a>
-              <a href="" class="btn btn-large date-range-trigger"><i class="fa fa-calendar"></i> <span class="date-range-label">Mar 10 2018 - Apr 10 2018</span></a>
+              <a href="#" class="btn btn-large date-range-trigger" id="open"><i class="fa fa-calendar"></i> <span class="date-range-label">Mar 10 2018 - Apr 10 2018</span></a>
+              <div class="range row">
+                <div class="col-md-3">Preset</div>
+                <div class="col-md-9" id="edit-type-wrapper"><select class="bs-select form-control" tabindex="3" id="travelType" name="travelType">
+											<option value="International">Custom</option>
+											<option value="Local">Yesterday</option>
+                      <option value="Local">Past month</option>
+                      <option value="Local">Past 3 month</option>
+                      <option value="Local">Past year</option>
+                      <option value="Local">Custom</option>
+                      <option value="alltime">All time</option>
+										</select></div>
+                <div class="col-md-3 date-title hide">Since</div>
+                <div class="col-md-9 hide"><input class="form-control date-picker dates_format" type="text" id="startDate" tabindex="1" name="startDate" value=""></div>
+                <div class="col-md-3 date-title hide">Until</div>
+                <div class="col-md-9 hide"><input class="form-control date-picker dates_format" type="text" id="startDate" tabindex="1" name="startDate" value=""></div>
+                <div class="col-md-12">
+                  <label class="actions">
+                      <a class="" id="cancel-date-range">Cancel</a>
+                      <button type="submit" id="apply-date-range" class="btn btn-black">Apply Changes</button>
+                      <input type="hidden" name="ci_csrf_token" value="ed053f87339a572f6973768458c2f883">
+                    </label>
+                </div>
+              </div>
             </div>
             <div class="date">
               <ul>
@@ -85,7 +109,7 @@
           <h3>YOUR POSTS</h3></div>
 
       </div>
-      <div class="col-md-12">
+      <div class="col-md-12 all-post">
         <div class="page">
           <div class="page__demo">
             <div class="main-container page__container">
@@ -103,7 +127,7 @@
                         <table>
                           <tr>
                             <td class="bg-img">
-                              <a href="" style="background:url(https://scontent.xx.fbcdn.net/v/t1.0-0/q83/s130x130/17626186_407237156304729_5430943840101045405_n.jpg?_nc_cat=0&oh=c8204209d7370702ccea9e4f18640377&oe=5B63AF74)"></a>
+                              <a href="pick-winner.html" style="background:url(https://scontent.xx.fbcdn.net/v/t1.0-0/q83/s130x130/17626186_407237156304729_5430943840101045405_n.jpg?_nc_cat=0&oh=c8204209d7370702ccea9e4f18640377&oe=5B63AF74)"></a>
                             </td>
                             <td>
                               <p>
@@ -119,7 +143,7 @@
                               </ul>
                             </td>
                             <td class="action">
-                              <a class="btn btn-block btn-info pick" href="/manage/posts/winners/20180410-1">Pick Winner</a>
+                              <a class="btn btn-block btn-info pick" href="pick-winner.html">Pick Winner</a>
                               <a class="btn btn-small" rel="tooltip" data-placement="bottom" data-original-title="Export Reactions" href="/manage/posts/exportlikes/20180410-1"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                               <a class="btn btn-small" rel="tooltip" data-placement="bottom" data-original-title="Export Reactions" href="/manage/posts/exportlikes/20180410-1"><i class="fa fa-comment" aria-hidden="true"></i></a>
                               <a class="btn btn-small" rel="tooltip" data-placement="bottom" data-original-title="Export Reactions" href="/manage/posts/exportlikes/20180410-1"><i class="fa fa-bullhorn"></i></a>
@@ -141,7 +165,7 @@
                       <table>
                         <tr>
                           <td class="bg-img">
-                            <a href="" style="background:url(https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/17362065_405738973121214_3391598149371335251_n.jpg?_nc_cat=0&oh=24164cdaa8187102b7b5d21b4dc50b01&oe=5B30ECCB)"></a>
+                            <a href="pick-winner.html" style="background:url(https://scontent.xx.fbcdn.net/v/t1.0-0/s130x130/17362065_405738973121214_3391598149371335251_n.jpg?_nc_cat=0&oh=24164cdaa8187102b7b5d21b4dc50b01&oe=5B30ECCB)"></a>
                           </td>
                           <td>
                             <p>
@@ -164,7 +188,7 @@
                             </ul>
                           </td>
                           <td class="action">
-                            <a class="btn btn-block btn-info pick" href="/manage/posts/winners/20180410-1">Pick Winner</a>
+                            <a class="btn btn-block btn-info pick" href="pick-winner.html">Pick Winner</a>
                             <a class="btn btn-small" rel="tooltip" data-placement="bottom" data-original-title="Export Reactions" href="/manage/posts/exportlikes/20180410-1"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                             <a class="btn btn-small" rel="tooltip" data-placement="bottom" data-original-title="Export Reactions" href="/manage/posts/exportlikes/20180410-1"><i class="fa fa-comment" aria-hidden="true"></i></a>
                             <a class="btn btn-small" rel="tooltip" data-placement="bottom" data-original-title="Export Reactions" href="/manage/posts/exportlikes/20180410-1"><i class="fa fa-bullhorn"></i></a>
@@ -203,7 +227,7 @@
                             </ul>
                           </td>
                           <td class="action">
-                            <a class="btn btn-block btn-info pick" href="/manage/posts/winners/20180410-1">Pick Winner</a>
+                            <a class="btn btn-block btn-info pick" href="pick-winner.html">Pick Winner</a>
                             <a class="btn btn-small" rel="tooltip" data-placement="bottom" data-original-title="Export Reactions" href="/manage/posts/exportlikes/20180410-1"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                             <a class="btn btn-small" rel="tooltip" data-placement="bottom" data-original-title="Export Reactions" href="/manage/posts/exportlikes/20180410-1"><i class="fa fa-comment" aria-hidden="true"></i></a>
                             <a class="btn btn-small" rel="tooltip" data-placement="bottom" data-original-title="Export Reactions" href="/manage/posts/exportlikes/20180410-1"><i class="fa fa-bullhorn"></i></a>
@@ -241,7 +265,7 @@
                             </ul>
                           </td>
                           <td class="action">
-                            <a class="btn btn-block btn-info pick" href="/manage/posts/winners/20180410-1">Pick Winner</a>
+                            <a class="btn btn-block btn-info pick" href="pick-winner.html">Pick Winner</a>
                             <a class="btn btn-small" rel="tooltip" data-placement="bottom" data-original-title="Export Reactions" href="/manage/posts/exportlikes/20180410-1"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
                             <a class="btn btn-small" rel="tooltip" data-placement="bottom" data-original-title="Export Reactions" href="/manage/posts/exportlikes/20180410-1"><i class="fa fa-comment" aria-hidden="true"></i></a>
                             <a class="btn btn-small" rel="tooltip" data-placement="bottom" data-original-title="Export Reactions" href="/manage/posts/exportlikes/20180410-1"><i class="fa fa-bullhorn"></i></a>
@@ -270,11 +294,41 @@
       </div> -->
     </div>
   </div>
+  <style media="screen">
+
+  </style>
 </body>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js">
 </script>
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js">
 </script>
-<script>setTimeout("function1()", 1000);</script>
+<script src="js/datepick.js">
+</script>
+<script type="text/javascript">
+$(document).ready( function() {
+  if($('#edit-type-wrapper select').val() == 'uprofile'){ //'.val()'
+         $('.picture').hide();
+     }
+
+
+  $('#edit-type-wrapper select').change(function(){
+     if($(this).val() == 'alltime'){ //'.val()'
+         $('.hide').hide();
+         return true;
+     }
+     $('.hide').show();
+  });
+});
+</script>
+<script>
+$("#open").click(function(){
+  $(".range").toggleClass("italics");
+});
+$("#apply-date-range").click(function(){
+  $(".all-post").toggleClass("italics");
+  $(".range").hide();
+});
+
+</script>
 
 </html>
